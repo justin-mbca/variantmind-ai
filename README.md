@@ -1,3 +1,31 @@
+# Roadmap: LLM & Agent AI Integration
+
+We will incrementally enhance VariantMind AI to include Large Language Model (LLM) and agent AI capabilities for advanced clinical genomics workflows. Planned features include:
+
+1. **LLM-Powered Clinical Report Generation**
+	- Use an LLM to generate natural language variant/tumor board reports from structured data.
+	- New endpoint: `/api/report/llm`.
+
+2. **LLM-Based Evidence Summarization**
+	- Summarize literature or database evidence for a variant using an LLM.
+
+3. **Agent AI for Variant Triage**
+	- Implement an agent to automate annotation, scoring, and prioritization of variant batches.
+	- New endpoint: `/api/agent/triage`.
+
+4. **Retrieval-Augmented Generation (RAG)**
+	- Use a vector database to enable LLM-powered Q&A and evidence retrieval for variants.
+
+5. **Prompt Engineering & Customization**
+	- Provide and allow customization of prompt templates for clinical scenarios.
+
+6. **Audit & Traceability**
+	- Log all LLM/agent interactions for regulatory compliance.
+
+7. **Frontend Integration**
+	- Display LLM-generated reports and agent results in the React dashboard.
+
+We will implement these features step by step, updating this README and the codebase as we progress.
 # Project Goals
 
 VariantMind AI is an MVP for a clinical genomic variant actionability scoring system. The goal is to provide a modular, explainable, and secure platform for:
