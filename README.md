@@ -16,24 +16,38 @@ flowchart TD
     F --> H["LLM / Agent AI Layer"]
     G --> H
 
-    H --> I["LLM-powered Report Generation<br>Evidence Summarization<br>Triage Automation"]
 
-    I --> J["Audit Logging and Traceability"]
-    I --> K["Frontend Dashboard - React"]
-    I --> L["API Output - JSON or HTML Report"]
+	H --> I["LLM-powered Report Generation<br>Evidence Summarization<br>Triage Automation"]
+	I --> O["Evidence Retrieval<br>Online DB & Article Search"]
+	O --> N["Human-in-the-Loop (HITL) Review<br>Evidence Display in GUI"]
+	N --> J["Audit Logging and Traceability"]
+	N --> K["Frontend Dashboard - React"]
+	N --> L["API Output - JSON or HTML Report"]
 
     J -.->|Logs| M["PostgreSQL Database"]
     B -.->|Store Variant| M
     C -.->|Store Annotation| M
 
-    style H fill:#f9f,stroke:#333,stroke-width:2px
-    style E fill:#bbf,stroke:#333,stroke-width:2px
-    style M fill:#bfb,stroke:#333,stroke-width:2px
+	style H fill:#f9f,stroke:#333,stroke-width:2px
+	style E fill:#bbf,stroke:#333,stroke-width:2px
+	style M fill:#bfb,stroke:#333,stroke-width:2px
+	style N fill:#ffd,stroke:#333,stroke-width:2px
+	style O fill:#eef,stroke:#333,stroke-width:2px
+# HITL (Human-in-the-Loop) & Evidence Integration
+
+The workflow includes:
+
+- Automated evidence retrieval (databases, literature, APIs) after LLM/agent output.
+- Display of supporting evidence (links, summaries, articles) in the HITL GUI for clinician review.
+- Clinicians can approve, reject, or comment on AI-generated reports and triage results, referencing the evidence.
+- All human interventions and evidence views are logged for audit and model improvement.
+
 ```
 
-# Roadmap: LLM & Agent AI Integration
 
-We will incrementally enhance VariantMind AI to include Large Language Model (LLM) and agent AI capabilities for advanced clinical genomics workflows. Planned features include:
+# Roadmap: LLM, Agent AI & Evidence Integration
+
+We will incrementally enhance VariantMind AI to include Large Language Model (LLM), agent AI, and evidence retrieval/display capabilities for advanced clinical genomics workflows. Planned features include:
 
 1. **LLM-Powered Clinical Report Generation**
 	- Use an LLM to generate natural language variant/tumor board reports from structured data.
@@ -57,6 +71,9 @@ We will incrementally enhance VariantMind AI to include Large Language Model (LL
 
 7. **Frontend Integration**
 	- Display LLM-generated reports and agent results in the React dashboard.
+
+8. **Evidence Retrieval and Display in GUI**
+	- Integrate automated evidence search (databases, articles) and display in the HITL review interface.
 
 We will implement these features step by step, updating this README and the codebase as we progress.
 # Project Goals
