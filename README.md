@@ -16,32 +16,24 @@ flowchart TD
     F --> H["LLM / Agent AI Layer"]
     G --> H
 
+    H --> I["LLM-powered Report Generation<br>Evidence Summarization<br>Triage Automation"]
 
-	H --> I["LLM-powered Report Generation<br>Evidence Summarization<br>Triage Automation"]
-	I --> O["Evidence Retrieval<br>Online DB & Article Search"]
-	O --> N["Human-in-the-Loop (HITL) Review<br>Evidence Display in GUI"]
-	N --> J["Audit Logging and Traceability"]
-	N --> K["Frontend Dashboard - React"]
-	N --> L["API Output - JSON or HTML Report"]
+    I --> O["Evidence Retrieval<br>Online DB and Article Search"]
+    O --> N["Human-in-the-Loop Review<br>Evidence Display in GUI"]
+
+    N --> J["Audit Logging and Traceability"]
+    N --> K["Frontend Dashboard - React"]
+    N --> L["API Output - JSON or HTML Report"]
 
     J -.->|Logs| M["PostgreSQL Database"]
     B -.->|Store Variant| M
     C -.->|Store Annotation| M
 
-	style H fill:#f9f,stroke:#333,stroke-width:2px
-	style E fill:#bbf,stroke:#333,stroke-width:2px
-	style M fill:#bfb,stroke:#333,stroke-width:2px
-	style N fill:#ffd,stroke:#333,stroke-width:2px
-	style O fill:#eef,stroke:#333,stroke-width:2px
-# HITL (Human-in-the-Loop) & Evidence Integration
-
-The workflow includes:
-
-- Automated evidence retrieval (databases, literature, APIs) after LLM/agent output.
-- Display of supporting evidence (links, summaries, articles) in the HITL GUI for clinician review.
-- Clinicians can approve, reject, or comment on AI-generated reports and triage results, referencing the evidence.
-- All human interventions and evidence views are logged for audit and model improvement.
-
+    style H fill:#f9f,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
+    style M fill:#bfb,stroke:#333,stroke-width:2px
+    style N fill:#ffd,stroke:#333,stroke-width:2px
+    style O fill:#eef,stroke:#333,stroke-width:2px
 ```
 
 
