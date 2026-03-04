@@ -193,20 +193,29 @@ A production-ready MVP for a clinical genomic variant actionability scoring syst
 
 ## Tech Stack
 - Backend: Python (FastAPI)
-- ML: XGBoost + SHAP
+- ML: XGBoost, SHAP
+- LLM Integration: OpenAI API or open-source LLMs (for report generation, summarization)
+- Agent AI: Python agent frameworks (e.g., LangChain, custom agents)
+- Evidence Retrieval: Literature/database APIs (e.g., PubMed, OncoKB, COSMIC, vector DB for RAG)
 - Data: PostgreSQL
-- Frontend: React (dashboard)
-- Cloud-ready (Dockerized)
+- Frontend: React (dashboard, HITL review)
+- Security: API key authentication
+- Audit: Logging and traceability
+- Cloud-ready: Dockerized, CI/CD support
 
 ## Key Features
 - VCF-like variant ingestion API
 - Annotation layer (OncoKB/COSMIC simulation)
 - Variant-centric feature engineering
 - AI scoring engine (actionability, resistance)
-- SHAP explainability
+- SHAP explainability and model transparency
+- LLM-powered report generation and evidence summarization
+- Agent AI for automated triage and workflow
+- Evidence retrieval from online databases and literature (RAG)
+- Human-in-the-loop (HITL) review and feedback in GUI
 - Tumor board report generator (JSON/HTML)
-- Audit logging (regulatory readiness)
-- API key authentication
+- Audit logging and regulatory readiness
+- API key authentication and security
 
 ## Quickstart
 See detailed instructions in each module folder.
