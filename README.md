@@ -68,6 +68,52 @@ We will incrementally enhance VariantMind AI to include Large Language Model (LL
 	- Integrate automated evidence search (databases, articles) and display in the HITL review interface.
 
 We will implement these features step by step, updating this README and the codebase as we progress.
+# Step-by-Step Implementation Plan
+
+Track progress and follow this checklist during development:
+
+1. **Core API & Data Flow**
+	- Finalize FastAPI backend for variant ingestion, annotation, scoring, and reporting.
+	- Integrate annotation, feature engineering, ML scoring, SHAP, and report generation in `/api/variant/score`.
+
+2. **Annotation & Feature Engineering**
+	- Expand annotation logic (simulate or connect to real sources).
+	- Implement feature engineering in a dedicated module.
+
+3. **ML Model Integration**
+	- Train and save an XGBoost model.
+	- Update model loading, scoring, and SHAP in `ml/model.py`.
+	- Integrate predictions and explanations into API responses.
+
+4. **Evidence Retrieval**
+	- Implement evidence retrieval (databases, literature, APIs).
+	- Connect evidence to scoring/reporting pipeline.
+
+5. **LLM/Agent AI Layer**
+	- Add endpoints for LLM-powered report generation and evidence summarization.
+	- Integrate agent logic for batch triage and automation.
+
+6. **Human-in-the-Loop (HITL) & GUI**
+	- Build React frontend for clinician review/approval.
+	- Display evidence and model explanations in GUI.
+	- Log all human interventions for audit/feedback.
+
+7. **Database & Audit Logging**
+	- Finalize PostgreSQL schema and SQLAlchemy models.
+	- Implement audit logging for predictions, reports, and human actions.
+
+8. **Security & Compliance**
+	- Harden API key authentication.
+	- Prepare for regulatory requirements (traceability, audit, privacy).
+
+9. **Testing & CI**
+	- Expand test coverage (unit, integration, end-to-end).
+	- Set up CI for automated testing and linting.
+
+10. **Documentation & Deployment**
+	- Keep README and code docs up to date.
+	- Dockerize backend and frontend for deployment.
+
 # Project Goals
 
 VariantMind AI is an MVP for a clinical genomic variant actionability scoring system. The goal is to provide a modular, explainable, and secure platform for:
