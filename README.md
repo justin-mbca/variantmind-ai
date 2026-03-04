@@ -2,25 +2,33 @@
 
 ```mermaid
 flowchart TD
-	A[User/API Client] -->|VCF-like Variant JSON| B[Variant Ingestion API]
-	B --> C[Annotation Layer<br/>(OncoKB/COSMIC Simulation)]
-	C --> D[Feature Engineering<br/>(Variant Features)]
-	D --> E[ML Scoring Engine<br/>(XGBoost, SHAP)]
-	E --> F[Actionability Score<br/>Resistance Probability<br/>SHAP Explanations]
-	C --> G[Evidence Retrieval<br/>(Literature, Databases)]
-	F --> H[LLM/Agent AI Layer]
-	G --> H
-	H --> I[LLM-powered Report Generation<br/>Evidence Summarization<br/>Triage Automation]
-	I --> J[Audit Logging & Traceability]
-	I --> K[Frontend Dashboard<br/>(React)]
-	I --> L[API Output<br/>(JSON/HTML Report)]
-	J -.->|Logs| M[PostgreSQL Database]
-	B -.->|Store Variant| M
-	C -.->|Store Annotation| M
 
-	style H fill:#f9f,stroke:#333,stroke-width:2px
-	style E fill:#bbf,stroke:#333,stroke-width:2px
-	style M fill:#bfb,stroke:#333,stroke-width:2px
+    A["User / API Client"] -->|VCF-like Variant JSON| B["Variant Ingestion API"]
+
+    B --> C["Annotation Layer<br>OncoKB / COSMIC Simulation"]
+    C --> D["Feature Engineering<br>Variant Features"]
+    D --> E["ML Scoring Engine<br>XGBoost + SHAP"]
+
+    E --> F["Actionability Score<br>Resistance Probability<br>SHAP Explanations"]
+
+    C --> G["Evidence Retrieval<br>Literature and Databases"]
+
+    F --> H["LLM / Agent AI Layer"]
+    G --> H
+
+    H --> I["LLM-powered Report Generation<br>Evidence Summarization<br>Triage Automation"]
+
+    I --> J["Audit Logging and Traceability"]
+    I --> K["Frontend Dashboard - React"]
+    I --> L["API Output - JSON or HTML Report"]
+
+    J -.->|Logs| M["PostgreSQL Database"]
+    B -.->|Store Variant| M
+    C -.->|Store Annotation| M
+
+    style H fill:#f9f,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
+    style M fill:#bfb,stroke:#333,stroke-width:2px
 ```
 
 # Roadmap: LLM & Agent AI Integration
