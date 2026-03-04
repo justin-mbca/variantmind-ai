@@ -199,9 +199,16 @@ We will implement these features step by step, updating this README and the code
 ## Quickstart
 See detailed instructions in each module folder.
 
+
 # VariantMind AI
 
 A production-ready MVP for a clinical genomic variant actionability scoring system. Modular, explainable, secure, and designed for future FDA Software-as-Medical-Device compliance.
+
+**Now with LLM and Agent AI Integration:**
+- Leverages Large Language Models (LLMs) for natural language report generation and evidence summarization.
+- Integrates agent AI for automated variant triage, annotation, and workflow automation.
+- Supports retrieval-augmented generation (RAG) for evidence search and Q&A.
+- Human-in-the-loop (HITL) review with explainable AI and evidence display in the GUI.
 
 ## Tech Stack
 - Backend: Python (FastAPI)
