@@ -1,0 +1,4 @@
+gene,transcript,protein_change,genome_build,tumor_type,tmb,prior_therapy_count
+TP53,NM_000546.5,p.R175H,GRCh38,lung_adenocarcinoma,12.5,2
+BRAF,NM_004333.4,p.V600E,GRCh38,melanoma,8.2,1
+EGFR,NM_005228.5,p.L858R,GRCh38,lung_adenocarcinoma,15.0,3

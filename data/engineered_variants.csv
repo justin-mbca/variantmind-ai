@@ -1,0 +1,16 @@
+gene,transcript,protein_change,genome_build,tumor_type,tmb,prior_therapy_count,hotspot_flag,driver_gene_flag,tmb_bin,tumor_type_encoded
+TP53,NM_000546.5,p.R175H,GRCh38,lung_adenocarcinoma,12.5,2,1,1,high,0
+EGFR,NM_005228.3,p.L858R,GRCh38,lung_adenocarcinoma,8.1,1,0,1,medium,0
+KRAS,NM_033360.4,p.G12D,GRCh38,colorectal_cancer,6.7,0,0,1,medium,1
+ALK,NM_004304.4,p.F1174L,GRCh38,neuroblastoma,15.2,3,0,1,high,2
+BRAF,NM_004333.4,p.V600E,GRCh38,melanoma,18.9,1,1,1,high,3
+PIK3CA,NM_006218.3,p.E545K,GRCh38,breast_cancer,9.3,2,0,1,medium,4
+NRAS,NM_002524.4,p.Q61R,GRCh38,thyroid_cancer,5.4,0,0,1,medium,5
+IDH1,NM_005896.3,p.R132H,GRCh38,glioma,3.2,1,0,1,low,6
+PTEN,NM_000314.6,p.R130Q,GRCh38,endometrial_cancer,7.8,2,0,1,medium,7
+CDKN2A,NM_000077.4,p.A148T,GRCh38,pancreatic_cancer,11.0,1,0,1,high,8
+MET,NM_000245.3,p.D1228N,GRCh38,lung_adenocarcinoma,13.5,2,0,1,high,0
+ERBB2,NM_004448.3,p.S310F,GRCh38,breast_cancer,10.1,0,0,1,high,4
+FGFR3,NM_000142.4,p.S249C,GRCh38,bladder_cancer,4.6,1,0,1,low,9
+KIT,NM_000222.3,p.D816V,GRCh38,gastrointestinal_stromal_tumor,16.7,3,0,1,high,10
+RET,NM_020975.6,p.M918T,GRCh38,medullary_thyroid_cancer,2.9,0,0,1,low,11
